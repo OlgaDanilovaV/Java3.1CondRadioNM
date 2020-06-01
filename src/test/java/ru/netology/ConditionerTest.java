@@ -7,14 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConditionerTest {
 
-
     @Test
-    public void shouldInitFieldToZero(){
+    public void shouldGetAndSet() {
         Conditioner conditioner = new Conditioner();
-        assertNull(conditioner.name);
-        assertEquals(0, conditioner.maxTemperature);
-
-
+        String expected = "Кондишн";
+        assertNull(conditioner.getName());
+        conditioner.setName(expected);
+        assertEquals(expected, conditioner.getName());
     }
 
 }
