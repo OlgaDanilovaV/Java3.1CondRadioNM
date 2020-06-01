@@ -32,4 +32,40 @@ class RadioTest {
         assertEquals(9, radio.getStation());
 
     }
+
+    @Test
+    public void shouldSetStation() {
+        Radio radio = new Radio();
+
+        radio.setStation(5);
+
+        assertEquals(5, radio.getStation());
+
+    }
+
+    @Test
+    public void shouldVolumeUp(){
+        Radio radio = new Radio();
+
+        radio.setVolume(9);
+
+        radio.setVolume(radio.getVolume() + 1);
+        radio.setVolume(radio.getVolume() + 1);
+        radio.setVolume(radio.getVolume() + 1);
+
+        assertEquals(10 , radio.getVolume());
+    }
+
+    @Test
+    public void shouldVolumeDown(){
+        Radio radio = new Radio();
+
+        radio.setVolume(2);
+
+        radio.setVolume(radio.getVolume() - 1);
+        radio.setVolume(radio.getVolume() - 1);
+        radio.setVolume(radio.getVolume() - 1);
+
+        assertEquals(0 , radio.getVolume());
+    }
 }

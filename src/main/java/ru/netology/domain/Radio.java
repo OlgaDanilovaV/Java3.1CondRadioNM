@@ -1,8 +1,10 @@
 package ru.netology.domain;
 
 public class Radio {
+
     private int station;
     private int volume;
+
 
     public int getStation() {
         return station;
@@ -25,6 +27,12 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
+        if (volume > 10){
+            return;
+        }
+        if (volume < 0){
+            return;
+        }
         this.volume = volume;
     }
 
