@@ -13,13 +13,10 @@ class ConditionerTest {
 
         conditioner.setMaxTemperature(25);
         conditioner.setMinTemperature(5);
-        conditioner.setCurrentTemperature(23);
+        conditioner.setCurrentTemperature(25);
 
         conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() + 1);
-        conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() + 1);
-        conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() + 1);
 
-        assertEquals(25, conditioner.getMaxTemperature());
         assertEquals(25, conditioner.getCurrentTemperature());
     }
 
@@ -29,13 +26,10 @@ class ConditionerTest {
 
         conditioner.setMaxTemperature(25);
         conditioner.setMinTemperature(5);
-        conditioner.setCurrentTemperature(7);
+        conditioner.setCurrentTemperature(5);
 
         conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() - 1);
-        conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() - 1);
-        conditioner.setCurrentTemperature(conditioner.getCurrentTemperature() - 1);
 
-        assertEquals(5, conditioner.getMinTemperature());
         assertEquals(5, conditioner.getCurrentTemperature());
     }
 
