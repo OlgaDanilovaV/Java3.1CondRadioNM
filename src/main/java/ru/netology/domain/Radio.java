@@ -1,14 +1,22 @@
 package ru.netology.domain;
 
 public class Radio {
-private int station;
-private int volume;
+    private int station;
+    private int volume;
 
     public int getStation() {
         return station;
     }
 
     public void setStation(int station) {
+        if (station > 9) {
+            station = 0;
+        }
+
+        if (station < 0) {
+            station = 9;
+        }
+
         this.station = station;
     }
 

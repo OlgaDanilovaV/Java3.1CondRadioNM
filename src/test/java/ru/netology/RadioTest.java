@@ -8,12 +8,28 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
-    public void shouldChangeStation(){
+    public void shouldChangeStationUp() {
         Radio radio = new Radio();
 
-        radio.setStation(3);
+        radio.setStation(9);
 
-        assertEquals(3,radio.getStation());
+        radio.setStation(radio.getStation() + 1);
+
+        assertEquals(0, radio.getStation());
+
+    }
+
+    @Test
+    public void shouldChangeStationDown() {
+        Radio radio = new Radio();
+
+        radio.setStation(2);
+
+        radio.setStation(radio.getStation() - 1);
+        radio.setStation(radio.getStation() - 1);
+        radio.setStation(radio.getStation() - 1);
+
+        assertEquals(9, radio.getStation());
 
     }
 }
