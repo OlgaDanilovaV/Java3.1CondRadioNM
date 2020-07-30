@@ -16,7 +16,6 @@ public class Radio {
     }
 
 
-
     public int getStation() {
         if (station > quantity){
             return 0;
@@ -42,7 +41,7 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-        if (volume > 10){
+        if (volume > 100){
             return;
         }
         if (volume < 0){
