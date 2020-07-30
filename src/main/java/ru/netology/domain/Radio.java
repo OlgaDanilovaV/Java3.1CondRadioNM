@@ -2,15 +2,18 @@ package ru.netology.domain;
 
 public class Radio {
 
+    private int quantity;
     private int station;
     private int volume;
 
     public Radio() {
     }
 
-    public Radio(int station) {
+    public Radio(int quantity, int station) {
+        this.quantity = quantity;
         this.station = station;
     }
+
 
 
     public int getStation() {
@@ -18,12 +21,12 @@ public class Radio {
     }
 
     public void setStation(int station) {
-        if (station > 9) {
+        if (station > quantity) {
             station = 0;
         }
 
         if (station < 0) {
-            station = 9;
+            station = quantity;
         }
 
         this.station = station;

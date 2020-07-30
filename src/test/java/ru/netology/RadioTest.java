@@ -11,10 +11,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
 
     @Test
-    public void shouldChangeStationUp() {
-        Radio radio = new Radio();
+    public void shouldSetStation() {
+        Radio radio = new Radio(10, 3);
 
-        radio.setStation(9);
+        assertEquals(3, radio.getStation());
+
+    }
+
+    @Test
+    public void shouldChangeStationUp() {
+        Radio radio = new Radio(10,10);
 
         radio.setStation(radio.getStation() + 1);
 
@@ -35,13 +41,7 @@ class RadioTest {
 
     }
 
-    @Test
-    public void shouldSetStation() {
-        Radio radio = new Radio(6);
 
-        assertEquals(5, radio.getStation());
-
-    }
 
     @Test
     public void shouldVolumeUp(){
