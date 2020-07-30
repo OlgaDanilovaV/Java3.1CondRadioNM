@@ -15,6 +15,12 @@ public class Radio {
 
     }
 
+    public Radio(int quantity, int station, int volume) {
+        this.quantity = quantity;
+        this.station = station;
+        this.volume = volume;
+    }
+
 
     public int getStation() {
         if (station > quantity){

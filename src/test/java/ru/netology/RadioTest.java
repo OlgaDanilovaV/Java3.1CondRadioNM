@@ -10,7 +10,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStation() {
-        Radio radio = new Radio(10, 12);
+        Radio radio = new Radio(10, 14);
 
         assertEquals(0, radio.getStation());
 
@@ -59,5 +59,15 @@ class RadioTest {
         radio.setVolume(radio.getVolume() - 1);
 
         assertEquals(0 , radio.getVolume());
+    }
+
+    @Test
+    public void everythingOk(){
+        Radio radio = new Radio(1,3,100);
+
+        radio.setVolume(radio.getVolume() + 1);
+
+        assertEquals(3, radio.getStation());
+        assertEquals(100 , radio.getVolume());
     }
 }
