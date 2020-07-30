@@ -10,7 +10,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStation() {
-        Radio radio = new Radio(10,11,30);
+        Radio radio = new Radio(10,8,30);
 
         assertEquals(0, radio.getStation());
 
