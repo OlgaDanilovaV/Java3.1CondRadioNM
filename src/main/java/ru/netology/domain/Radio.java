@@ -5,6 +5,13 @@ public class Radio {
     private int station;
     private int volume;
 
+    public Radio() {
+    }
+
+    public Radio(int station) {
+        this.station = station;
+    }
+
 
     public int getStation() {
         return station;

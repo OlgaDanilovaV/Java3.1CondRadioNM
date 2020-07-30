@@ -5,6 +5,9 @@ import ru.netology.domain.Radio;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//1. появляется конструктор, который может повлиять на кол-во станций. в конструкторе устанавливается поле
+// громкость 1. дефолт
+
 class RadioTest {
 
     @Test
@@ -34,9 +37,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStation() {
-        Radio radio = new Radio();
-
-        radio.setStation(5);
+        Radio radio = new Radio(6);
 
         assertEquals(5, radio.getStation());
 
