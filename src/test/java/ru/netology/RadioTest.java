@@ -10,7 +10,7 @@ class RadioTest {
 
     @Test
     public void shouldSetStation() {
-        Radio radio = new Radio(10, 14);
+        Radio radio = new Radio(10,11,30);
 
         assertEquals(0, radio.getStation());
 
@@ -18,7 +18,7 @@ class RadioTest {
 
     @Test
     public void shouldChangeStationUp() {
-        Radio radio = new Radio(10,10);
+        Radio radio = new Radio(10,10,100);
 
         radio.setStation(radio.getStation() + 1);
 
@@ -28,7 +28,7 @@ class RadioTest {
 
     @Test
     public void shouldChangeStationDown() {
-        Radio radio = new Radio(10, 0);
+        Radio radio = new Radio(10, 0,18);
 
         radio.setStation(radio.getStation() - 1);
 
@@ -40,10 +40,7 @@ class RadioTest {
 
     @Test
     public void shouldVolumeUp(){
-        Radio radio = new Radio();
-
-        radio.setVolume(100);
-
+        Radio radio = new Radio(7,4,100);
         radio.setVolume(radio.getVolume() + 1);
 
 
@@ -52,9 +49,7 @@ class RadioTest {
 
     @Test
     public void shouldVolumeDown(){
-        Radio radio = new Radio();
-
-        radio.setVolume(0);
+        Radio radio = new Radio(10,5,0);
 
         radio.setVolume(radio.getVolume() - 1);
 

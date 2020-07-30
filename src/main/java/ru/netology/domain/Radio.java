@@ -1,26 +1,17 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Radio {
 
     private int quantity;
     private int station;
     private int volume;
-
-    public Radio() {
-    }
-
-    public Radio(int quantity, int station) {
-        this.quantity = quantity;
-        this.station = station;
-
-    }
-
-    public Radio(int quantity, int station, int volume) {
-        this.quantity = quantity;
-        this.station = station;
-        this.volume = volume;
-    }
-
 
     public int getStation() {
         if (station > quantity){
@@ -42,10 +33,6 @@ public class Radio {
         this.station = station;
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
     public void setVolume(int volume) {
         if (volume > 100){
             return;
@@ -55,6 +42,5 @@ public class Radio {
         }
         this.volume = volume;
     }
-
 
 }
