@@ -12,9 +12,9 @@ class RadioTest {
 
     @Test
     public void shouldSetStation() {
-        Radio radio = new Radio(10, 3);
+        Radio radio = new Radio(10, 12);
 
-        assertEquals(3, radio.getStation());
+        assertEquals(0, radio.getStation());
 
     }
 
@@ -30,14 +30,11 @@ class RadioTest {
 
     @Test
     public void shouldChangeStationDown() {
-        Radio radio = new Radio();
-
-        radio.setStation(0);
+        Radio radio = new Radio(10, 0);
 
         radio.setStation(radio.getStation() - 1);
 
-
-        assertEquals(9, radio.getStation());
+        assertEquals(10, radio.getStation());
 
     }
 

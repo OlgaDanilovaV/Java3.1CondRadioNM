@@ -12,11 +12,16 @@ public class Radio {
     public Radio(int quantity, int station) {
         this.quantity = quantity;
         this.station = station;
+
     }
 
 
 
     public int getStation() {
+        if (station > quantity){
+            return 0;
+        }
+
         return station;
     }
 
